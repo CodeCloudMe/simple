@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :all_vendors
+
   resources :items
 
   resources :posts

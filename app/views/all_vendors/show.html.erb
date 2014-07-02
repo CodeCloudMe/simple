@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @all_vendor.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @all_vendor.description %>
+</p>
+
+<%= link_to 'Edit', edit_all_vendor_path(@all_vendor) %> |
+<%= link_to 'Back', all_vendors_path %>

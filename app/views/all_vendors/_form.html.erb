@@ -1,0 +1,25 @@
+<%= form_for(@all_vendor) do |f| %>
+  <% if @all_vendor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@all_vendor.errors.count, "error") %> prohibited this all_vendor from being saved:</h2>
+
+      <ul>
+      <% @all_vendor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
