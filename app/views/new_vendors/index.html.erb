@@ -1,0 +1,27 @@
+<h1>Listing new_vendors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @new_vendors.each do |new_vendor| %>
+      <tr>
+        <td><%= new_vendor.name %></td>
+        <td><%= new_vendor.country %></td>
+        <td><%= link_to 'Show', new_vendor %></td>
+        <td><%= link_to 'Edit', edit_new_vendor_path(new_vendor) %></td>
+        <td><%= link_to 'Destroy', new_vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New New vendor', new_new_vendor_path %>

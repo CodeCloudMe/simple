@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :new_vendors
+
   resources :all_vendors
 
   resources :items
